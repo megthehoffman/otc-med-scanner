@@ -5,7 +5,7 @@ import Colors from '../constants/Colors';
 import { MonoText } from './StyledText';
 import { Text, View } from './Themed';
 
-export default function EditScreenInfo({ path }: { path: string }) {
+export default function ProjectInfo({ path }: { path: string }) {
   return (
     <View>
       <View style={styles.getStartedContainer}>
@@ -13,28 +13,27 @@ export default function EditScreenInfo({ path }: { path: string }) {
           style={styles.getStartedText}
           lightColor="rgba(0,0,0,0.8)"
           darkColor="rgba(255,255,255,0.8)">
-          Open up the code for this screen: HI MEGAN
+          As we begin the work to revamp Medication Tracking for both patients and providers, we thought it would be fun to consider how we could make the ability to track medications even easier for patients, such that they might be more inclined to do it!
         </Text>
 
         <View
           style={[styles.codeHighlightContainer, styles.homeScreenFilename]}
           darkColor="rgba(255,255,255,0.05)"
           lightColor="rgba(0,0,0,0.05)">
-          <MonoText>{path}</MonoText>
         </View>
 
         <Text
           style={styles.getStartedText}
           lightColor="rgba(0,0,0,0.8)"
           darkColor="rgba(255,255,255,0.8)">
-          Change any of the text, save the file, and your app will automatically update.
+          About __% of patients use Force on mobile, which means that most of our patients could utilize the camera of their phone to scan barcodes on OTC medications. If we could scan medications and get all the information we need about type and dosage, we could add the medication to the patient's cabinet without them having to manually enter that info themselves. 
         </Text>
       </View>
 
       <View style={styles.helpContainer}>
         <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
           <Text style={styles.helpLinkText} lightColor={Colors.light.tint}>
-            Tap here if your app doesn't automatically update after making changes
+            Tap here to check out the GitHub repo!
           </Text>
         </TouchableOpacity>
       </View>
@@ -44,7 +43,7 @@ export default function EditScreenInfo({ path }: { path: string }) {
 
 function handleHelpPress() {
   WebBrowser.openBrowserAsync(
-    'https://docs.expo.io/get-started/create-a-new-app/#opening-the-app-on-your-phonetablet'
+    'https://github.com/megthehoffman/otc-med-scanner'
   );
 }
 
