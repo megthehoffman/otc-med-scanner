@@ -19,7 +19,7 @@ export default function MedScanner({ path }: { path: string }) {
 
       <View style={styles.helpContainer}>
           <Text style={styles.helpLinkText} lightColor={Colors.light.tint}>
-            You'll have to give permission for the app to use your camera.
+            You'll have to give permission for the app to use your camera. Hi there!!!!!!
           </Text>
       </View>
     </View>
